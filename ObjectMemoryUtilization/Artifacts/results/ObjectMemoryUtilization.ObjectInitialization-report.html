@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>ObjectMemoryUtilization.ObjectInitialization-20220919-182645</title>
+<title>ObjectMemoryUtilization.ObjectInitialization-20220919-183237</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -22,9 +22,12 @@ Intel Core i5-10400F CPU 2.90GHz, 1 CPU, 12 logical and 6 physical cores
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>             Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Gen0</th><th>Allocated</th>
+<thead><tr><th>                           Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Gen0</th><th>Allocated</th>
 </tr>
-</thead><tbody><tr><td>InitializationOfOneObject</td><td>26.87 ns</td><td>0.430 ns</td><td>0.402 ns</td><td>0.0038</td><td>24 B</td>
+</thead><tbody><tr><td>InitializationOfOneObject</td><td>27.42 ns</td><td>0.159 ns</td><td>0.133 ns</td><td>0.0038</td><td>24 B</td>
+</tr><tr><td>InitializationOfFiveObjects</td><td>45.08 ns</td><td>0.420 ns</td><td>0.392 ns</td><td>0.0191</td><td>120 B</td>
+</tr><tr><td>InitializationOfOneObjectSingleMethod</td><td>25.79 ns</td><td>0.239 ns</td><td>0.223 ns</td><td>0.0038</td><td>24 B</td>
+</tr><tr><td>InitializationOfFiveObjectsSingleMethod</td><td>47.79 ns</td><td>0.325 ns</td><td>0.304 ns</td><td>0.0191</td><td>120 B</td>
 </tr></tbody></table>
 </body>
 </html>
