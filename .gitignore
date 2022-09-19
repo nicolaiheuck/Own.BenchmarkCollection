@@ -1,13 +1,13 @@
 ﻿.idea
-#bin
+bin
 obj
 *.user
 
 # Allow BenchmarkDotNet artifacts
 #!BenchmarkDotNet.Artifacts
 #!BenchmarkDotNet.Artifacts/*
-bin
-!bin/Release/net6.0/BenchmarkDotNet.Artifacts/*
+
+**/Artifacts/*.log
 
 # Containing personal stuff or local file paths
 StringTesting
