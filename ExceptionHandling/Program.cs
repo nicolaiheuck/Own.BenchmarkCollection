@@ -1,5 +1,6 @@
-﻿using BenchmarkDotNet.Running;
+﻿using BenchmarkDotNet.Configs;
+using BenchmarkDotNet.Running;
 using ExceptionHandling;
-using Microsoft.Diagnostics.Tracing;
 
-BenchmarkRunner.Run<TryCatchThrowOrNothing>();
+ManualConfig config = DefaultConfig.Instance.WithArtifactsPath("../../../Artifacts");
+BenchmarkRunner.Run<TryCatchThrowOrNothing>(config);

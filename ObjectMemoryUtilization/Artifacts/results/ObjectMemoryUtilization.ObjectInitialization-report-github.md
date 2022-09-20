@@ -10,7 +10,7 @@ Intel Core i5-10400F CPU 2.90GHz, 1 CPU, 12 logical and 6 physical cores
 ```
 |                                  Method |     Mean |    Error |   StdDev |   Gen0 | Allocated |
 |---------------------------------------- |---------:|---------:|---------:|-------:|----------:|
-|               InitializationOfOneObject | 27.42 ns | 0.159 ns | 0.133 ns | 0.0038 |      24 B |
-|             InitializationOfFiveObjects | 45.08 ns | 0.420 ns | 0.392 ns | 0.0191 |     120 B |
-|   InitializationOfOneObjectSingleMethod | 25.79 ns | 0.239 ns | 0.223 ns | 0.0038 |      24 B |
-| InitializationOfFiveObjectsSingleMethod | 47.79 ns | 0.325 ns | 0.304 ns | 0.0191 |     120 B |
+|               InitializationOfOneObject | 28.03 ns | 0.057 ns | 0.053 ns | 0.0038 |      24 B |
+|             InitializationOfFiveObjects | 45.19 ns | 0.279 ns | 0.261 ns | 0.0191 |     120 B |
+|   InitializationOfOneObjectSingleMethod | 27.50 ns | 0.254 ns | 0.237 ns | 0.0038 |      24 B |
+| InitializationOfFiveObjectsSingleMethod | 44.94 ns | 0.269 ns | 0.252 ns | 0.0191 |     120 B |

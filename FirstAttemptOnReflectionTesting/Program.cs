@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Running;
 
 namespace FirstAttemptOnReflectionTesting
@@ -10,11 +11,12 @@ namespace FirstAttemptOnReflectionTesting
     {
         static void Main(string[] args)
         {
-            BenchmarkRunner.Run<GetClassesImplementingAnInterfaceTests>();
-            // new GetClassesImplementingAnInterfaceTests().Default();
+            ManualConfig config = DefaultConfig.Instance.WithArtifactsPath("../../../Artifacts");
+            BenchmarkRunner.Run<GetClassesImplementingAnInterfaceTests>(config);
         }
     }
     [MemoryDiagnoser]
+    [MarkdownExporterAttribute.GitHub]
     public class GetClassesImplementingAnInterfaceTests
     {
         [Benchmark(Baseline = true)]

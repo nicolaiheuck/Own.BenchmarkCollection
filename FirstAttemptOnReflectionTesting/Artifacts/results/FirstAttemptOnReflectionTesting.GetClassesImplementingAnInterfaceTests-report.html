@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>FirstAttemptOnReflectionTesting.GetClassesImplementingAnInterfaceTests-20220919-190347</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.22000
+Intel Core i5-10400F CPU 2.90GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK=6.0.400
+  [Host]     : .NET 5.0.11 (5.0.1121.47308), X64 RyuJIT
+  DefaultJob : .NET 5.0.11 (5.0.1121.47308), X64 RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>          Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Ratio</th><th>Gen 0</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>Default</td><td>1.927 &mu;s</td><td>0.0108 &mu;s</td><td>0.0101 &mu;s</td><td>1.00</td><td>0.1907</td><td>1 KB</td>
+</tr><tr><td>Default_DifferentOrder</td><td>1.853 &mu;s</td><td>0.0260 &mu;s</td><td>0.0244 &mu;s</td><td>0.96</td><td>0.1926</td><td>1 KB</td>
+</tr><tr><td>Default_CombinedWhere</td><td>1.770 &mu;s</td><td>0.0079 &mu;s</td><td>0.0074 &mu;s</td><td>0.92</td><td>0.1698</td><td>1 KB</td>
+</tr></tbody></table>
+</body>
+</html>

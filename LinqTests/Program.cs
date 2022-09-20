@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Running;
 
 namespace LinqTests;
@@ -11,10 +12,12 @@ public class Program
 {
     public static void Main()
     {
-        BenchmarkRunner.Run<IEnumerableVsList>();
+        ManualConfig config = DefaultConfig.Instance.WithArtifactsPath("../../../Artifacts");
+        BenchmarkRunner.Run<IEnumerableVsList>(config);
     }
 }
 [MemoryDiagnoser]
+[MarkdownExporterAttribute.GitHub]
 public class IEnumerableVsList
 {
     private List<int> _intList = new();

@@ -1,4 +1,5 @@
 ﻿using System;
+using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Running;
 
 namespace JsonParsing
@@ -7,61 +8,8 @@ namespace JsonParsing
     {
         public static void Main()
         {
-            using (new TimedExecution("All benchmarks"))
-            {
-                BenchmarkRunner.Run<NewVsOld_LargeList>();
-            }
-
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadLine();
-            Console.ReadLine();
-            Console.ReadLine();
-            Console.ReadLine();
-            Console.ReadLine();
-            Console.ReadLine();
-            Console.ReadLine();
-            Console.ReadLine();
-            Console.ReadLine();
-            Console.ReadLine();
-            Console.ReadLine();
-            Console.ReadLine();
-            Console.ReadLine();
-            Console.ReadLine();
-            Console.ReadLine();
-            Console.ReadLine();
-
-            // Room room = new()
-            // {
-            //     RoomNumber = 42,
-            //     People = NewVsOld_LargeList.GetFakePeopleData()
-            // };
-            // string data = System.Text.Json.JsonSerializer.Serialize(room);
-            // File.WriteAllText("data.json", data);
+            ManualConfig config = DefaultConfig.Instance.WithArtifactsPath("../../../Artifacts");
+            BenchmarkRunner.Run<NewVsOld_LargeList>(config);
         }
     }
 }

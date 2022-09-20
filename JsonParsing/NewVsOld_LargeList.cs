@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 namespace JsonParsing;
 
 [Obsolete("WARNING: This benchmark is REALLY SLOW (about 9 minutes)")]
+[MarkdownExporterAttribute.GitHub]
 public class NewVsOld_LargeList
 {
     // |                 Method |       Mean |    Error |    StdDev | Ratio | RatioSD |

@@ -3,6 +3,7 @@
 namespace ExceptionHandling;
 
 [MemoryDiagnoser]
+[MarkdownExporterAttribute.GitHub]
 public class TryCatchThrowOrNothing
 {
     // SharpLab: https://sharplab.io/#v2:D4AQTAjAsAUCDMACciDCiDetE+z5SIALIgHID2ALgBYCWAdgOYAUAlHjljPj4g5YgDOAVwC2iALyIADAG4OvAGbkATomb8+kmbK0AeRBGly+AalPtuvTgus4R401Nryr1gL6wFntwWQkAFRUAT1QAQ0oAY2oA6hVyAHc2BS47REoQ23xUtPxNB205LOtlNQ16AVpC3SqDIxNac0tc7OLcgqc+VxacHzafNMiI6PUAUQAPSIBTAAdKWnJ6RCnmuxyWmniE7rsB/B93IA=

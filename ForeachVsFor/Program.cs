@@ -1,5 +1,6 @@
 ﻿using System;
 using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Running;
 
 namespace ForeachVsFor
@@ -8,7 +9,8 @@ namespace ForeachVsFor
     {
         static void Main(string[] args)
         {
-            BenchmarkRunner.Run<WhenIteratingObjects>();
+            ManualConfig config = DefaultConfig.Instance.WithArtifactsPath("../../../Artifacts");
+            BenchmarkRunner.Run<WhenIteratingObjects>(config);
         }
     }
     [MemoryDiagnoser]
@@ -43,6 +45,7 @@ namespace ForeachVsFor
         }
     }
     [MemoryDiagnoser]
+    [MarkdownExporterAttribute.GitHub]
     public class WhenIteratingObjects
     {
         private Person Person { get; set; }
